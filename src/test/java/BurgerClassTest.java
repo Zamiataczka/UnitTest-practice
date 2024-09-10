@@ -11,6 +11,7 @@ import static org.mockito.Mockito.when;
 
 public class BurgerClassTest {
     private Burger burger;
+    private final float delta = 0;
 
     //стаб Bun
     public Bun mockedBun() {
@@ -86,7 +87,7 @@ public class BurgerClassTest {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         float actualPrice = burger.getPrice();
-        Assert.assertEquals(500, actualPrice, 0);
+        Assert.assertEquals(500, actualPrice, delta);
     }
 
     // Проверка работы метода getReceipt

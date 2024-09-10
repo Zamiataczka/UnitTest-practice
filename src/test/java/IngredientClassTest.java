@@ -14,6 +14,7 @@ public class IngredientClassTest {
     private final IngredientType ingredientType;
     private final String name;
     private final float price;
+    private final float delta = 0;
     Ingredient ingredient;
 
     public IngredientClassTest(IngredientType ingredientType, String name, float price) {
@@ -57,6 +58,6 @@ public class IngredientClassTest {
     //Провекра метода getPrice
         @Test
         public void getPriceTest() {
-        Assert.assertEquals(price, ingredient.getPrice(), 0.0f);
+        Assert.assertEquals(price, ingredient.getPrice(), delta);
     }
 }
